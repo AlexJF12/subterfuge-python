@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env/python
 
 # scrape subterfuge leaderboards
 
@@ -79,5 +79,5 @@ df['date_scraped'] = datetime.date.today().strftime("%d %b %Y")
 df['time_scraped'] = datetime.datetime.now().strftime("%H:%M")
 
 # save to csv
-today = datetime.date.today().strftime("%d%b%Y")
+today = datetime.date.today().strftime("%Y-%m-%d")
 df.to_csv('~/Documents/subterfuge/data/sub_' + str(today) + '.csv', index=False)
